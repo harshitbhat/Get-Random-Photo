@@ -1,3 +1,21 @@
-<button (click)="onClick()">Fetch new image</button>
-
-<img [src]="photoUrl" [alt]="photoDescription" />
+<div class="container">
+  <h1>Show a random picture</h1>
+  <div class="btn-container">
+    <button (click)="onClick()">Fetch new image</button>
+  </div>
+  <div class="img-container">
+    <div class="about-img">
+      <h3>
+        Photo by: {{ photographerFirstName }} {{ photographerInstaProfile }}
+      </h3>
+      <h4>{{ photoDescription }}</h4>
+      <h6 *ngIf="photographerInstaProfile !== ''">
+        Follow photographer on
+        <a [href]="photographerInstaProfile">{{ photographerInstaProfile }}</a>
+      </h6>
+    </div>
+    <div class="show-img">
+      <img [src]="photoUrl" [alt]="photoDescription" />
+    </div>
+  </div>
+</div>

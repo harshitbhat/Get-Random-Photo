@@ -10,7 +10,6 @@ export class ShowPhotosComponent implements OnInit {
   photoUrl: string = '';
   photoDescription: string = '';
   photographerFirstName: string = '';
-  photographerLastName: string = '';
   photographerInstaProfile: string = '';
 
   constructor(private photosService: PhotosService) {
@@ -28,7 +27,6 @@ export class ShowPhotosComponent implements OnInit {
       this.photoUrl = res.urls.regular;
       this.photoDescription = res.description;
       this.photographerFirstName = res.user.first_name;
-      this.photographerLastName = res.user.last_name;
       this.photographerInstaProfile = res.user.social.portfolio_url;
     });
   }

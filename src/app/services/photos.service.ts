@@ -9,7 +9,6 @@ interface UnsplashResponse {
   };
   user: {
     first_name: string;
-    last_name: string;
     social: {
       portfolio_url: string;
     };
